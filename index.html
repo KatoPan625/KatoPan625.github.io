@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phước An (Pan) · Backend & Web Developer</title>
+  <meta name="description" content="Phước An (Pan), IT student at UTH. Backend services and APIs, web and mobile apps." />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash.
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="monogram" href="#top" aria-label="Back to top">PA</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme" type="button" aria-label="Toggle light and dark theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+    </button>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <p class="eyebrow">Portfolio · MMXXVI</p>
+      <h1 class="name"><span class="engrave" data-text="Phước An">Phước An</span></h1>
+      <p class="aka">known simply as Pan</p>
+      <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+      <p class="lead">IT student at UTH. I design backend services and APIs, and build web and mobile apps that are calm to use and easy to maintain.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">View selected work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section reveal">
+      <header class="section-head"><span class="num">I.</span><h2>About</h2></header>
+      <div class="about">
+        <blockquote>“Good software, like good typography, should get out of the way.”</blockquote>
+        <div>
+          <p>I'm <strong>Phước An</strong>, though most people simply call me <strong>Pan</strong>. I study Information Technology at the University of Transport Ho Chi Minh City (UTH).</p>
+          <p>Most of my work sits on the backend: database schemas, REST APIs and the services behind them. On the front, I build web apps with React and Next.js and mobile apps with Flutter. I also enjoy classical computer vision coursework, from contrast enhancement to corner detection.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section reveal">
+      <header class="section-head"><span class="num">II.</span><h2>Selected Work</h2></header>
+
+      <article class="project">
+        <div class="p-index">01</div>
+        <div class="p-body">
+          <p class="p-meta">2026 · Backend &amp; API · Team of 4 · UTH × VNPT NET</p>
+          <h3>Network Quality Map</h3>
+          <p>A web map that shows 4G mobile network quality by region, built during the UTH × VNPT NET enterprise semester. KPIs are computed per cell and rolled up to provinces and wards with traffic-weighted averages.</p>
+          <ul class="points">
+            <li>Built the FastAPI backend on PostgreSQL 17 with PostGIS, and wrote the API contract for the map frontend.</li>
+            <li>Covers 34 provinces and 168 wards of Ho Chi Minh City, hourly over 30 days, on clearly labelled simulated data.</li>
+            <li>Only aggregated figures are exposed; no station coordinates or subscriber data.</li>
+          </ul>
+          <ul class="chips"><li>FastAPI</li><li>PostgreSQL</li><li>PostGIS</li><li>Python</li></ul>
+          <p class="status">Private repository</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-index">02</div>
+        <div class="p-body">
+          <p class="p-meta">2026 · Full stack · Personal project</p>
+          <h3>Student OS</h3>
+          <p>A personal study dashboard: subjects, assignments on a To do / Doing / Done board, and a calendar of classes and deadlines in Vietnam time.</p>
+          <ul class="points">
+            <li>Email and password sign-in with Supabase Auth, data in Postgres.</li>
+            <li>A Gemini study assistant that adds deadlines and classes from plain sentences, with per-account rate limits.</li>
+            <li>Built on the Next.js App Router with TypeScript, deployable to Vercel.</li>
+          </ul>
+          <ul class="chips"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Gemini</li></ul>
+          <p class="status">Private repository</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-index">03</div>
+        <div class="p-body">
+          <p class="p-meta">2026 · Coursework · Teams of 4–5</p>
+          <h3>Computer Vision Studies</h3>
+          <p>A series of group projects in classical computer vision, ending with low-contrast crack detection on asphalt roads.</p>
+          <ul class="points">
+            <li>Crack detection: built baselines A/B/C, integrated the team's method and wrote the first experiment report.</li>
+            <li>Labs on CLAHE, adaptive thresholding and multi-scale Hough transforms (my part), with saved experiments.</li>
+            <li>Harris and Harris–Laplace corner detectors written from scratch, with unit tests.</li>
+          </ul>
+          <ul class="chips"><li>Python</li><li>OpenCV</li><li>NumPy</li><li>Jupyter</li><li>pytest</li></ul>
+          <p class="status">Private repositories</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-index">04</div>
+        <div class="p-body">
+          <p class="p-meta">2025 · Tooling · Intelligent Transportation System</p>
+          <h3>Video Frame Extractor</h3>
+          <p>A small Python tool that turns street-traffic footage into numbered frames for a transportation dataset, sampling every frame or at fixed intervals.</p>
+          <ul class="points">
+            <li>Writes frame number, file path and timestamp for every frame as CSV and JSON.</li>
+          </ul>
+          <ul class="chips"><li>Python</li><li>OpenCV</li></ul>
+          <p class="status">Private repository</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section reveal">
+      <header class="section-head"><span class="num">III.</span><h2>Experience &amp; Education</h2></header>
+      <ol class="timeline">
+        <li>
+          <p class="t-date">2026 · Present</p>
+          <h3>Enterprise Semester, UTH × VNPT NET</h3>
+          <p class="t-role">Backend &amp; API</p>
+          <p>Building the backend of a network quality map with a four-person team, working with mentors from VNPT NET.</p>
+        </li>
+        <li>
+          <!-- TODO: add your start year, e.g. "2023 · Present" -->
+          <p class="t-date">Present</p>
+          <h3>University of Transport Ho Chi Minh City (UTH)</h3>
+          <p class="t-role">Student, Information Technology</p>
+          <p>Coursework in software engineering, databases and computer vision.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Toolkit -->
+    <section id="toolkit" class="section reveal">
+      <header class="section-head"><span class="num">IV.</span><h2>Toolkit</h2></header>
+      <dl class="ledger">
+        <div><dt>Backend</dt><dd>Python · FastAPI · TypeScript · PostgreSQL · Supabase</dd></div>
+        <div><dt>Web</dt><dd>React · Next.js</dd></div>
+        <div><dt>Mobile</dt><dd>Flutter · Dart</dd></div>
+        <div><dt>Tools</dt><dd>Git · GitHub · Docker · Vercel</dd></div>
+        <div><dt>Languages</dt><dd>Vietnamese · English</dd></div>
+      </dl>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact reveal">
+      <header class="section-head"><span class="num">V.</span><h2>Contact</h2></header>
+      <p class="big">Have a project or a role in mind?<br /><em>Let's talk.</em></p>
+      <a class="mail" href="mailto:phuocanlai0602@gmail.com">phuocanlai0602@gmail.com</a>
+      <ul class="links">
+        <li><a href="https://github.com/KatoPan625" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/KatoPa62" rel="noopener">X</a></li>
+        <!-- TODO: add Facebook and CV when ready
+        <li><a href="FACEBOOK_LINK" rel="noopener">Facebook</a></li>
+        <li><a href="cv.pdf" download>Download CV</a></li>
+        -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+    <p>© <span id="year">2026</span> Phước An · Set in Cormorant Garamond &amp; Inter</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
